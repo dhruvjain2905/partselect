@@ -110,7 +110,6 @@ docker-compose up -d
 The repo includes pre-built seed data (25 parts, 9 appliance models, Q&As, repair stories):
 
 ```bash
-python db/load_excel.py partselect_real_data_1.xlsx
 python db/load_excel.py partselect_real_data_2.xlsx
 ```
 
@@ -204,6 +203,6 @@ partselect-chatbot/
 
 ## Seed Data Coverage
 
-25 parts across dishwashers and refrigerators, 9 appliance models, 10+ expert Q&As, 8+ repair stories with difficulty/time/tools info, compatibility mappings, and symptom fix-rate percentages.
+80 parts across dishwashers and refrigerators, 9 appliance models, 10+ expert Q&As, 8+ repair stories with difficulty/time/tools info, compatibility mappings, and symptom fix-rate percentages.
 
 To scale to the full PartSelect catalog: scrape `partselect.com/Models/{model_number}/` with Playwright, insert in the same Excel format, and re-run `generate_embeddings.py` (it skips already-embedded rows). Swap `MemorySaver` for `AsyncRedisSaver` for multi-process session persistence.
