@@ -2,6 +2,7 @@
 
 An AI-powered customer support assistant for Whirlpool/KitchenAid dishwasher and refrigerator parts. Helps users find compatible parts, diagnose symptoms, look up prices, and get installation guidance.
 
+[Demo Video](https://www.loom.com/share/d3b241a4c0b94bcbad70e2189d08c199) 
 ---
 
 ## Tech Stack
