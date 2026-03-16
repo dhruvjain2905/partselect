@@ -1,0 +1,124 @@
+.product-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0 4px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-list::-webkit-scrollbar {
+  height: 4px;
+}
+
+.product-list::-webkit-scrollbar-thumb {
+  background: var(--ps-gray-300);
+  border-radius: 2px;
+}
+
+.product-card {
+  flex: 0 0 240px;
+  scroll-snap-align: start;
+  background: var(--ps-white);
+  border: 1px solid var(--ps-gray-200);
+  border-radius: 10px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  border-color: var(--ps-orange);
+  box-shadow: 0 2px 8px rgba(230, 126, 34, 0.1);
+}
+
+.product-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-ps {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ps-gray-400);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.product-stock {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 8px;
+}
+
+.product-stock.in-stock {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.product-stock.out-stock {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.product-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ps-gray-800);
+  line-height: 1.3;
+}
+
+.product-category {
+  font-size: 11px;
+  color: var(--ps-gray-400);
+}
+
+.product-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ps-gray-900);
+}
+
+.product-fix {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ps-orange);
+  background: #fff7ed;
+  padding: 2px 7px;
+  border-radius: 8px;
+}
+
+.product-cta {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ps-orange);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: gap 0.15s;
+}
+
+.product-card:hover .product-cta {
+  gap: 5px;
+}

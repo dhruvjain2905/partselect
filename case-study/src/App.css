@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --ps-orange: #E67E22;
+  --ps-orange-hover: #d35400;
+  --ps-teal: #4A7C7C;
+  --ps-teal-light: #5a9e9e;
+  --ps-bg: #f8f9fa;
+  --ps-white: #ffffff;
+  --ps-gray-50: #f9fafb;
+  --ps-gray-100: #f3f4f6;
+  --ps-gray-200: #e5e7eb;
+  --ps-gray-300: #d1d5db;
+  --ps-gray-400: #9ca3af;
+  --ps-gray-500: #6b7280;
+  --ps-gray-600: #4b5563;
+  --ps-gray-700: #374151;
+  --ps-gray-800: #1f2937;
+  --ps-gray-900: #111827;
+  --header-height: 56px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  background-color: var(--ps-bg);
+  color: var(--ps-gray-800);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: var(--ps-white);
+  border-bottom: 1px solid var(--ps-gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-toggle {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ps-gray-500);
+  transition: all 0.15s;
+}
+
+.sidebar-toggle:hover {
+  background: var(--ps-gray-100);
+  color: var(--ps-gray-700);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ps-gray-900);
+  letter-spacing: -0.3px;
+}
+
+.header-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--ps-gray-300);
+}
+
+.header-tagline {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ps-gray-500);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.new-chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ps-orange);
+  background: none;
+  border: 1px solid var(--ps-orange);
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.new-chat-btn:hover {
+  background: var(--ps-orange);
+  color: var(--ps-white);
+}
+
+.header-contact {
+  text-align: right;
+}
+
+.header-phone {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ps-orange);
+  letter-spacing: -0.2px;
+}
+
+.header-hours {
+  font-size: 11px;
+  color: var(--ps-gray-400);
+  margin-top: 1px;
+}
+
+/* Hide contact info on small screens */
+@media (max-width: 640px) {
+  .header-contact {
+    display: none;
+  }
+  .header-tagline {
+    display: none;
+  }
+  .header-divider {
+    display: none;
+  }
+}
